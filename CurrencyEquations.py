@@ -1,11 +1,11 @@
-import yfinance
+import yfinance  #imports yfinance module for getting stock prices
 def cadusd():
-    ticker = yfinance.Ticker('CAD=X').info
-    conrate = ticker['open']
-    ratefl = float(conrate)
-    amount = input("Type the amount you want to convert to USD: ")
-    amountfl = float(amount)
-    print(amount, "CAD is equal to about", amountfl*ratefl, "USD")
+    ticker = yfinance.Ticker('CAD=X').info #creates dict with current stock data
+    conrate = ticker['open'] #create "conrate" variable with current stock price
+    ratefl = float(conrate) #converts conrate to a float type and stores it in ratefl
+    amount = input("Type the amount you want to convert to USD: ") #asks for input on amount to convert
+    amountfl = float(amount) #converts input to a float type and puts it in "amountfl"
+    print(amount, "CAD is equal to about", amountfl*ratefl, "USD") #prints "X ABC is equal to about X ABC" also performing the conversion
 
 def cadeur():
     ticker = yfinance.Ticker('EURCAD=X').info
@@ -332,6 +332,3 @@ def jpynzd():
     amount = input("Type the amount you want to convert to NZD: ")
     amountfl = float(amount)
     print(amount, "JPY is equal to about", amountfl*ratefl, "NZD")
-
-
-

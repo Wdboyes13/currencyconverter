@@ -99,4 +99,3 @@ if CurrencyIn == "JPY":
         CurrencyEquations.jpygbp()
     if CurrencyOut == "NZD":
         CurrencyEquations.jpynzd()
-
