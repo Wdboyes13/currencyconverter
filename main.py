@@ -13,6 +13,8 @@ if CurrencyIn == "CAD":
         CurrencyEquations.cadaud()
     if CurrencyOut == "NZD":
         CurrencyEquations.cadnzd()
+    if CurrencyOut == "JPY":
+        CurrencyEquations.cadjpy()
 
 if CurrencyIn == "USD":
     if CurrencyOut == "CAD":
@@ -25,6 +27,8 @@ if CurrencyIn == "USD":
         CurrencyEquations.usdaud()
     if CurrencyOut == "NZD":
         CurrencyEquations.usdnzd()
+    if CurrencyOut == "JPY":
+        CurrencyEquations.usdjpy()
 
 if CurrencyIn == "EUR":
     if CurrencyOut == "USD":
@@ -37,6 +41,8 @@ if CurrencyIn == "EUR":
         CurrencyEquations.euraud()
     if CurrencyOut == "NZD":
         CurrencyEquations.eurnzd()
+    if CurrencyOut == "JPY":
+        CurrencyEquations.eurjpy()
 
 if CurrencyIn == "GBP":
     if CurrencyOut == "USD":
@@ -49,6 +55,8 @@ if CurrencyIn == "GBP":
         CurrencyEquations.gbpaud()
     if CurrencyOut == "NZD":
         CurrencyEquations.gbpnzd()
+    if CurrencyOut == "JPY":
+        CurrencyEquations.gbpjpy()
 
 if CurrencyIn == "AUD":
     if CurrencyOut == "USD":
@@ -61,6 +69,8 @@ if CurrencyIn == "AUD":
         CurrencyEquations.audgbp()
     if CurrencyOut == "NZD":
         CurrencyEquations.audnzd()
+    if CurrencyOut == "JPY":
+        CurrencyEquations.audjpy()
 
 if CurrencyIn == "NZD":
     if CurrencyOut == "USD":
@@ -73,3 +83,20 @@ if CurrencyIn == "NZD":
         CurrencyEquations.nzdaud()
     if CurrencyOut == "GBP":
         CurrencyEquations.nzdgbp()
+    if CurrencyOut == "JPY":
+        CurrencyEquations.nzdjpy()
+
+if CurrencyIn == "JPY":
+    if CurrencyOut == "USD":
+        CurrencyEquations.jpyusd()
+    if CurrencyOut == "EUR":
+        CurrencyEquations.jpyeur()
+    if CurrencyOut == "CAD":
+        CurrencyEquations.jpycad()
+    if CurrencyOut == "AUD":
+        CurrencyEquations.jpyaud()
+    if CurrencyOut == "GBP":
+        CurrencyEquations.jpygbp()
+    if CurrencyOut == "NZD":
+        CurrencyEquations.jpynzd()
+

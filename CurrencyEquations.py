@@ -38,6 +38,14 @@ def cadaud():
     amountfl = float(amount)
     print(amount, "CAD is equal to about", amountfl*ratefl, "AUD")
 
+def cadjpy():
+    ticker = yfinance.Ticker('JPYCAD=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to JPY: ")
+    amountfl = float(amount)
+    print(amount, "CAD is equal to about", amountfl*ratefl, "JPY")
+
 def usdcad():
     ticker = yfinance.Ticker('CADUSD=X').info
     conrate = ticker['open']
@@ -78,6 +86,14 @@ def usdnzd():
     amountfl = float(amount)
     print(amount, "USD is equal to about", amountfl*ratefl, "NZD")
 
+def usdjpy():
+    ticker = yfinance.Ticker('JPYUSD=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to JPY: ")
+    amountfl = float(amount)
+    print(amount, "USD is equal to about", amountfl*ratefl, "JPY")
+
 def gbpcad():
     ticker = yfinance.Ticker('CADGBP=X').info
     conrate = ticker['open']
@@ -117,6 +133,13 @@ def gbpnzd():
     amount = input("Type the amount you want to convert to NZD: ")
     amountfl = float(amount)
     print(amount, "GBP is equal to about", amountfl*ratefl, "NZD")
+def gbpjpy():
+    ticker = yfinance.Ticker('JPYGBP=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to JPY: ")
+    amountfl = float(amount)
+    print(amount, "GBP is equal to about", amountfl*ratefl, "JPY")
 
 def eurcad():
     ticker = yfinance.Ticker('CADEUR=X').info
@@ -158,6 +181,14 @@ def eurnzd():
     amountfl = float(amount)
     print(amount, "EUR is equal to about", amountfl*ratefl, "NZD")
 
+def eurjpy():
+    ticker = yfinance.Ticker('JPYEUR=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to JPY: ")
+    amountfl = float(amount)
+    print(amount, "EUR is equal to about", amountfl*ratefl, "JPY")
+
 def audcad():
     ticker = yfinance.Ticker('CADAUD=X').info
     conrate = ticker['open']
@@ -198,6 +229,14 @@ def audnzd():
     amountfl = float(amount)
     print(amount, "AUD is equal to about", amountfl*ratefl, "NZD")
 
+def audjpy():
+    ticker = yfinance.Ticker('JPYAUD=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to JPY: ")
+    amountfl = float(amount)
+    print(amount, "AUD is equal to about", amountfl*ratefl, "JPY")
+
 def nzdcad():
     ticker = yfinance.Ticker('CADNZD=X').info
     conrate = ticker['open']
@@ -237,3 +276,62 @@ def nzdaud():
     amount = input("Type the amount you want to convert to AUD: ")
     amountfl = float(amount)
     print(amount, "NZD is equal to about", amountfl*ratefl, "AUD")
+
+def nzdjpy():
+    ticker = yfinance.Ticker('JPYNZD=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to JPY: ")
+    amountfl = float(amount)
+    print(amount, "NZD is equal to about", amountfl*ratefl, "JPY")
+
+def jpycad():
+    ticker = yfinance.Ticker('CADJPY=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to CAD: ")
+    amountfl = float(amount)
+    print(amount, "JPY is equal to about", amountfl*ratefl, "CAD")
+
+def jpyusd():
+    ticker = yfinance.Ticker('USDJPY=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to USD: ")
+    amountfl = float(amount)
+    print(amount, "JPY is equal to about", amountfl*ratefl, "JPY")
+
+def jpyeur():
+    ticker = yfinance.Ticker('EURJPY=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to EUR: ")
+    amountfl = float(amount)
+    print(amount, "JPY is equal to about", amountfl*ratefl, "EUR")
+
+def jpygbp():
+    ticker = yfinance.Ticker('GBPJPY=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to GBP: ")
+    amountfl = float(amount)
+    print(amount, "JPY is equal to about", amountfl*ratefl, "GBP")
+
+def jpyaud():
+    ticker = yfinance.Ticker('AUDJPY=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to AUD: ")
+    amountfl = float(amount)
+    print(amount, "JPY is equal to about", amountfl*ratefl, "AUD")
+
+def jpynzd():
+    ticker = yfinance.Ticker('NZDJPY=X').info
+    conrate = ticker['open']
+    ratefl = float(conrate)
+    amount = input("Type the amount you want to convert to NZD: ")
+    amountfl = float(amount)
+    print(amount, "JPY is equal to about", amountfl*ratefl, "NZD")
+
+
+

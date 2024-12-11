@@ -1,11 +1,16 @@
-## To install python 3 ##
+## Currency Converter ##  
+
+## Supports *CAD USD GBP EUR AUD NZD JPY* ##
+
+#
+### To install python 3 ###
 Download and install the appropriate file from [Python](https://www.python.org/downloads/)
 
-## To install the required packages ##
+### To install the required packages ###
 Make sure pip is installed `python3 -m pip --version`  
 Install yfinance `python3 -m pip install yfinance`
 
-## To download and run the app
+### To download and run the app ###
 Make sure git is installed  
 run `git clone https://github.com/Wdboyes13/currencyconverter`  
 Then `cd currencyconverter`  
