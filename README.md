@@ -1,8 +1,5 @@
 ## Currency Converter ##  
-
-## Supports *CAD USD GBP EUR AUD NZD JPY* ##
-
-#
+  
 ### To install python 3 ###
 Download and install the appropriate file from [Python](https://www.python.org/downloads/)
 
