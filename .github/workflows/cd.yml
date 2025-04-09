@@ -53,8 +53,9 @@ jobs:
       # Upload the built binaries to GitHub Releases (optional)
       - name: Upload Binaries to GitHub Releases
         if: success()
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.2.1
         with:
+          tag_name: dist-$(date +'%Y%m%d%H%M%S')
           files: |
             dist/*
         env:
