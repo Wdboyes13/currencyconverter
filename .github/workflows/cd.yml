@@ -1,0 +1,61 @@
+name: Build CurrConver CLI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use a common starting point (Linux AMD64 runner)
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        architecture: [x64, arm64]
+        # Define the matrix for all platforms and architectures you want to build
+
+    steps:
+      # Checkout the code
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Set up Python (ensure to use the same version you need)
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller
+
+      # Build for different platforms based on matrix values
+      - name: Build CurrConver CLI for ${{ matrix.os }} ${{ matrix.architecture }}
+        run: |
+          if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+            if [ "${{ matrix.architecture }}" == "x64" ]; then
+              pyinstaller --onefile --name currconver currconver/__main__.py
+            elif [ "${{ matrix.architecture }}" == "arm64" ]; then
+              docker run --rm --platform linux/arm64/v8 -v $PWD:/app python:3.9 bash -c "pip install pyinstaller && pyinstaller --onefile --name currconver currconver/__main__.py"
+            fi
+          elif [ "${{ matrix.os }}" == "macos-latest" ]; then
+            pyinstaller --onefile --name currconver currconver/__main__.py
+          elif [ "${{ matrix.os }}" == "windows-latest" ]; then
+            pyinstaller --onefile --name currconver currconver/__main__.py
+          fi
+
+      # Upload the built binaries to GitHub Releases (optional)
+      - name: Upload Binaries to GitHub Releases
+        if: success()
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
