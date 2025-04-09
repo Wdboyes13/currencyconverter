@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+name = "CurrConver"
+version = "1.0.2"
+description = "Currency Converter using Current Stocks"
+long-description = """
+# Currency Converter using current stocks  
+To use run `pip install currconver`  
+To authorize with Open Exchange Rates run `python3 -m currconver AUTH`  
+For conversion run `python3 -m currconver CONV local_currency destination_currency amount_decimal`  
+For more info go to https://github.com/Wdboyes13/currencyconverter
+"""
+long-descriptidon-content-type = "text/markdown"
+author = "William B"
+author-email = "willdev2025@outlook.com"
+url = "https://github.com/Wdboyes13/currencyconverter"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Operating System :: OS Independent"
+]
+
+[tool.hatch.dependencies]
+requires = [
+    "requests"
+]
+
+[tool.hatch.entry-points.console_scripts]
+currconv = "currconver.__main__:main"
+
+[tool.hatch.packages]
+include = ["currconver"]
+
+[project]
+name = "CurrConver"
+version = "1.0.2"
+authors = [
+  { name="William B", email="willdev2025@outlook.com" },
+]
+description = "A Python3 Currency Converter using Stocks"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Operating System :: OS Independent"
+]
+license = "CC0-1.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "requests"
+]
+[project.urls]
+Homepage = "https://github.com/Wdboyes13/currencyconverter"
