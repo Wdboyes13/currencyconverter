@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [tool.hatch.metadata]
 name = "CurrConver"
-version = "1.0.2"
+version = "1.0.3"
 description = "Currency Converter using Current Stocks"
 long-description = """
 # Currency Converter using current stocks  
@@ -36,7 +36,7 @@ include = ["currconver"]
 
 [project]
 name = "CurrConver"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
   { name="William B", email="willdev2025@outlook.com" },
 ]
